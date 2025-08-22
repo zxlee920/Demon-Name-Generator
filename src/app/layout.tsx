@@ -72,12 +72,13 @@ export default function RootLayout({
         />
         
         {/* Structured Data */}
-        <script
+        <Script
+          id="website-schema"
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(websiteSchema)
-          }}
-        />
+          strategy="beforeInteractive"
+        >
+          {JSON.stringify(websiteSchema)}
+        </Script>
       </head>
       <body className="antialiased">
         <Header />

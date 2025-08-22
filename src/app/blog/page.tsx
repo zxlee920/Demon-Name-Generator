@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Script from "next/script"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Calendar, BookOpen } from "lucide-react"
 import { getAllBlogPosts } from "@/lib/blog-data"
@@ -52,12 +53,13 @@ export default function BlogPage() {
 
   return (
     <div className="min-h-screen">
-      <script
+      <Script
+        id="blog-schema"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(blogSchema)
-        }}
-      />
+        strategy="beforeInteractive"
+      >
+        {JSON.stringify(blogSchema)}
+      </Script>
       <div className="container mx-auto px-4 py-12">
         <div className="text-center mb-12">
           <div className="flex items-center justify-center space-x-2 mb-4">

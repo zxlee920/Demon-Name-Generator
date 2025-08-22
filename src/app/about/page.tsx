@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Script from "next/script"
 import { ArrowLeft, Zap, Users, BookOpen, Target } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import type { Metadata } from "next"
@@ -40,12 +41,13 @@ export default function AboutPage() {
 
   return (
     <div className="min-h-screen bg-background">
-      <script
+      <Script
+        id="about-schema"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(aboutSchema)
-        }}
-      />
+        strategy="beforeInteractive"
+      >
+        {JSON.stringify(aboutSchema)}
+      </Script>
       <div className="container mx-auto px-4 py-12 max-w-4xl">
         <Link 
           href="/"

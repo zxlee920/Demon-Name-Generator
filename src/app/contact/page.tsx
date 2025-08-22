@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Script from "next/script"
 import { ArrowLeft, Mail } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -45,12 +46,13 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen bg-background">
-      <script
+      <Script
+        id="contact-schema"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(contactSchema)
-        }}
-      />
+        strategy="beforeInteractive"
+      >
+        {JSON.stringify(contactSchema)}
+      </Script>
       <div className="container mx-auto px-4 py-12 max-w-4xl">
         <Link 
           href="/"

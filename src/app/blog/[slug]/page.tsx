@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation"
 import Link from "next/link"
+import Script from "next/script"
 import { getBlogPostBySlug } from "@/lib/blog-data"
 import { Calendar, BookOpen, ArrowLeft, User } from "lucide-react"
 
@@ -128,11 +129,14 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   return (
     <div className="min-h-screen">
-      <script
+      <Script
+        id="article-schema"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(articleSchema)
-        }}
+        strategy="beforeInteractive"
+      >
+        {JSON.stringify(articleSchema)}
+      </Script>
+      <Script
       />
       <div className="container mx-auto px-4 py-12">
         {/* 返回链接 */}

@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { ArrowLeft, Mail, MessageSquare, Github, Twitter } from "lucide-react"
+import { ArrowLeft, Mail } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import type { Metadata } from "next"
@@ -64,7 +64,7 @@ export default function ContactPage() {
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold mb-4">Contact Us</h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Have any questions, suggestions, or feedback? We'd love to hear from you!
+            Have any questions, suggestions, or feedback? We&apos;d love to hear from you!
           </p>
         </div>
 
@@ -111,7 +111,7 @@ export default function ContactPage() {
               <div>
                 <h4 className="font-medium mb-2">💰 Is this tool free?</h4>
                 <p className="text-sm text-muted-foreground">
-                  Completely free! We don't charge any fees and no account registration is required.
+                  Completely free! We don&apos;t charge any fees and no account registration is required.
                 </p>
               </div>
               <div>
@@ -123,7 +123,7 @@ export default function ContactPage() {
               <div>
                 <h4 className="font-medium mb-2">🔒 Is privacy secure?</h4>
                 <p className="text-sm text-muted-foreground">
-                  We don't collect any personal information. All generation happens locally in your browser.
+                  We don&apos;t collect any personal information. All generation happens locally in your browser.
                 </p>
               </div>
             </CardContent>

@@ -47,7 +47,7 @@ function markdownToHtml(markdown: string): string {
   // 移除第一个 H1 标题（因为页面已经显示了标题）
   const contentWithoutFirstH1 = markdown.replace(/^# .*$/m, '')
   
-  let html = contentWithoutFirstH1
+  const html = contentWithoutFirstH1
     // 标题
     .replace(/^### (.*$)/gim, '<h3 class="text-xl font-semibold mt-6 mb-3">$1</h3>')
     .replace(/^## (.*$)/gim, '<h2 class="text-2xl font-bold mt-8 mb-4">$1</h2>')

@@ -695,7 +695,7 @@ export function DemonGenerator() {
                 <Eye className="h-16 w-16 mx-auto text-muted-foreground/50" />
                 <div className="space-y-2">
                   <h3 className="text-xl font-semibold text-muted-foreground">No Demons Summoned Yet</h3>
-                  <p className="text-muted-foreground">Configure your settings and click "Summon" to generate demons</p>
+                  <p className="text-muted-foreground">Configure your settings and click &quot;Summon&quot; to generate demons</p>
                 </div>
               </div>
             </div>

@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { ArrowLeft, Zap, Users, BookOpen, Target } from "lucide-react"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -202,7 +202,7 @@ export default function AboutPage() {
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground mb-4">
-                Have any suggestions or questions? We'd love to hear your feedback!
+                Have any suggestions or questions? We&apos;d love to hear your feedback!
               </p>
               <div className="flex justify-center space-x-4">
                 <Link 

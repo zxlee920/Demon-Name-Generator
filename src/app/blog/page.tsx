@@ -1,5 +1,4 @@
 import Link from "next/link"
-import Script from "next/script"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Calendar, BookOpen } from "lucide-react"
 import { getAllBlogPosts } from "@/lib/blog-data"

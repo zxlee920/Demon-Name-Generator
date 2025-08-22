@@ -1,5 +1,4 @@
 import Link from "next/link"
-import Script from "next/script"
 import { ArrowLeft, Zap, Users, BookOpen, Target } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import type { Metadata } from "next"

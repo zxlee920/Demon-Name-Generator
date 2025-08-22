@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Skull, Github, Twitter, Mail } from "lucide-react"
+import { Skull } from "lucide-react"
 
 export function Footer() {
   return (

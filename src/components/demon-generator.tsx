@@ -365,8 +365,6 @@ const getDailyPresetDemons = (): GeneratedDemon[] => {
 
 export function DemonGenerator() {
   // 设置最大生成数量为20
-  const maxDemons = 20
-  
   const [generatedDemons, setGeneratedDemons] = useState<GeneratedDemon[]>(getDailyPresetDemons())
   const [customPrefix, setCustomPrefix] = useState("")
   const [generateCount, setGenerateCount] = useState(6)

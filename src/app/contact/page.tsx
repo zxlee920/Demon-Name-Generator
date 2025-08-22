@@ -1,5 +1,4 @@
 import Link from "next/link"
-import Script from "next/script"
 import { ArrowLeft, Mail } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"

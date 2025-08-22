@@ -82,7 +82,7 @@ export default function RootLayout({
       </head>
       <body className="antialiased">
         <Header />
-        <main>
+        <main className="pt-16">
           {children}
         </main>
         <Footer />

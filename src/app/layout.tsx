@@ -46,6 +46,30 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Google AdSense Account */}
+        <meta name="google-adsense-account" content="ca-pub-1852570664224960" />
+        
+        {/* Google Analytics */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-G7TNDTM8G9"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-G7TNDTM8G9');
+            `,
+          }}
+        />
+        
+        {/* Google AdSense */}
+        <script 
+          async 
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1852570664224960"
+          crossOrigin="anonymous"
+        />
+        
+        {/* Structured Data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

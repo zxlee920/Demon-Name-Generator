@@ -1,0 +1,25 @@
+# Cloudflare Pages Configuration
+name = "demon-name-generator"
+compatibility_date = "2024-08-21"
+
+[build]
+command = "npm run build"
+cwd = "."
+watch_dir = "src"
+
+[build.environment_variables]
+NODE_VERSION = "18"
+NPM_VERSION = "9"
+
+# Environment variables for production
+[env.production]
+NEXT_PUBLIC_SITE_URL = "https://demonnamegenerator.xyz"
+
+# Environment variables for preview
+[env.preview]
+NEXT_PUBLIC_SITE_URL = "https://demon-name-generator.pages.dev"
+
+# Custom domains (configure in Cloudflare Dashboard)
+# [[env.production.routes]]
+# pattern = "demonnamegenerator.xyz"
+# zone_name = "demonnamegenerator.xyz"

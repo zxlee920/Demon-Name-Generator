@@ -41,13 +41,13 @@ export default function AboutPage() {
 
   return (
     <div className="min-h-screen bg-background">
-      <Script
-        id="about-schema"
+      <script
         type="application/ld+json"
-        strategy="beforeInteractive"
-      >
-        {JSON.stringify(aboutSchema)}
-      </Script>
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(aboutSchema)
+        }}
+        suppressHydrationWarning={true}
+      />
       <div className="container mx-auto px-4 py-12 max-w-4xl">
         <Link 
           href="/"

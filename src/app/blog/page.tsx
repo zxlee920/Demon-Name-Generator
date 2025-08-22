@@ -53,13 +53,13 @@ export default function BlogPage() {
 
   return (
     <div className="min-h-screen">
-      <Script
-        id="blog-schema"
+      <script
         type="application/ld+json"
-        strategy="beforeInteractive"
-      >
-        {JSON.stringify(blogSchema)}
-      </Script>
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(blogSchema)
+        }}
+        suppressHydrationWarning={true}
+      />
       <div className="container mx-auto px-4 py-12">
         <div className="text-center mb-12">
           <div className="flex items-center justify-center space-x-2 mb-4">

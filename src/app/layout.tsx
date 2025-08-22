@@ -71,14 +71,14 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
         
-        {/* Structured Data */}
-        <Script
-          id="website-schema"
+        {/* Structured Data - moved to head to avoid hydration issues */}
+        <script
           type="application/ld+json"
-          strategy="beforeInteractive"
-        >
-          {JSON.stringify(websiteSchema)}
-        </Script>
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(websiteSchema)
+          }}
+          suppressHydrationWarning={true}
+        />
       </head>
       <body className="antialiased">
         <Header />

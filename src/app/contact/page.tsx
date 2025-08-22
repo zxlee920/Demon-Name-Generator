@@ -46,13 +46,13 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen bg-background">
-      <Script
-        id="contact-schema"
+      <script
         type="application/ld+json"
-        strategy="beforeInteractive"
-      >
-        {JSON.stringify(contactSchema)}
-      </Script>
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(contactSchema)
+        }}
+        suppressHydrationWarning={true}
+      />
       <div className="container mx-auto px-4 py-12 max-w-4xl">
         <Link 
           href="/"

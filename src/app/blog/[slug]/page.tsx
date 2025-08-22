@@ -129,13 +129,13 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   return (
     <div className="min-h-screen">
-      <Script
-        id="article-schema"
+      <script
         type="application/ld+json"
-        strategy="beforeInteractive"
-      >
-        {JSON.stringify(articleSchema)}
-      </Script>
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(articleSchema)
+        }}
+        suppressHydrationWarning={true}
+      />
       <Script
       />
       <div className="container mx-auto px-4 py-12">

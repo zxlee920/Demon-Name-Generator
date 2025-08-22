@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server'
 import { getAllBlogPosts } from '@/lib/blog-data'
 
+export const dynamic = 'force-static'
+
 export function GET() {
   const baseUrl = 'https://demonnamegenerator.xyz'
   const posts = getAllBlogPosts()

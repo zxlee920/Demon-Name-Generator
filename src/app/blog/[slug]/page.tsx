@@ -1,8 +1,15 @@
 import { notFound } from "next/navigation"
 import Link from "next/link"
-import Script from "next/script"
-import { getBlogPostBySlug } from "@/lib/blog-data"
+import { getBlogPostBySlug, getAllBlogPosts } from "@/lib/blog-data"
 import { Calendar, BookOpen, ArrowLeft, User } from "lucide-react"
+
+// 生成静态参数，用于静态导出
+export async function generateStaticParams() {
+  const posts = getAllBlogPosts()
+  return posts.map((post) => ({
+    slug: post.slug,
+  }))
+}
 
 interface BlogPostPageProps {
   params: Promise<{
@@ -135,8 +142,6 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           __html: JSON.stringify(articleSchema)
         }}
         suppressHydrationWarning={true}
-      />
-      <Script
       />
       <div className="container mx-auto px-4 py-12">
         {/* 返回链接 */}

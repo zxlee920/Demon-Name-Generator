@@ -21,7 +21,7 @@
 - **UI组件**: Radix UI
 - **图标**: Lucide React
 - **内容管理**: Markdown + Gray Matter
-- **部署**: Vercel
+- **部署**: cloudflare pages
 
 ## 📦 安装和运行
 

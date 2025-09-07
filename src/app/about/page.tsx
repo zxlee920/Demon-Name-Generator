@@ -194,34 +194,6 @@ export default function AboutPage() {
           </div>
         </section>
 
-
-        {/* Contact Information */}
-        <section className="text-center">
-          <Card>
-            <CardHeader>
-              <CardTitle>Contact Us</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground mb-4">
-                Have any suggestions or questions? We&apos;d love to hear your feedback!
-              </p>
-              <div className="flex justify-center space-x-4">
-                <Link 
-                  href="/contact" 
-                  className="inline-flex items-center px-4 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors"
-                >
-                  Contact Us
-                </Link>
-                <Link 
-                  href="/blog" 
-                  className="inline-flex items-center px-4 py-2 border border-input rounded-md hover:bg-accent transition-colors"
-                >
-                  Read Blog
-                </Link>
-              </div>
-            </CardContent>
-          </Card>
-        </section>
       </div>
     </div>
   )

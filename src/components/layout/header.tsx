@@ -46,12 +46,6 @@ export function Header() {
             >
               About
             </Link>
-            <Link 
-              href="/contact" 
-              className="text-sm font-medium transition-colors hover:text-primary"
-            >
-              Contact
-            </Link>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -94,13 +88,6 @@ export function Header() {
                 onClick={closeMobileMenu}
               >
                 About
-              </Link>
-              <Link 
-                href="/contact" 
-                className="text-sm font-medium transition-colors hover:text-primary px-2 py-1"
-                onClick={closeMobileMenu}
-              >
-                Contact
               </Link>
             </nav>
           </div>

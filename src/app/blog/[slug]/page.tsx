@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation"
 import Link from "next/link"
+import Image from "next/image"
 import { getBlogPostBySlug, getAllBlogPosts } from "@/lib/blog-data"
 import { Calendar, BookOpen, ArrowLeft, User } from "lucide-react"
 
@@ -64,6 +65,8 @@ function markdownToHtml(markdown: string): string {
     .replace(/\*\*(.*?)\*\*/g, '<strong class="font-semibold">$1</strong>')
     // 斜体
     .replace(/\*(.*?)\*/g, '<em class="italic">$1</em>')
+    // 图片
+    .replace(/!\[(.*?)\]\((.*?)\)/g, '<img src="$2" alt="$1" class="my-4 rounded-lg shadow-md max-w-full h-auto" loading="lazy" />')
   
   // 处理列表
   const lines = html.split('\n')
@@ -175,7 +178,19 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               </div>
             </div>
             
-            <p className="text-xl text-muted-foreground">
+            {post.coverImage && (
+              <div className="relative w-full h-64 md:h-96 rounded-lg overflow-hidden mb-6">
+                <Image 
+                  src={post.coverImage} 
+                  alt={post.title}
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+            )}
+            
+            <p className="text-xl text-muted-foreground mb-6">
               {post.excerpt}
             </p>
           </div>

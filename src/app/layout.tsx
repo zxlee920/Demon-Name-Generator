@@ -72,8 +72,9 @@ export default function RootLayout({
         />
         
         {/* Microsoft Clarity */}
-        <script
-          type="text/javascript"
+        <Script
+          id="microsoft-clarity"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               (function(c,l,a,r,i,t,y){
@@ -83,7 +84,6 @@ export default function RootLayout({
               })(window, document, "clarity", "script", "t2k5tdnqjo");
             `
           }}
-          suppressHydrationWarning={true}
         />
         
         {/* Structured Data - moved to head to avoid hydration issues */}

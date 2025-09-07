@@ -19,34 +19,29 @@ export function Footer() {
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h3 className="text-sm font-semibold">Quick Links</h3>
+            <h3 className="text-sm font-semibold">Links</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/blog" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Blog Articles
+                <Link href="/" className="text-muted-foreground hover:text-foreground transition-colors">
+                  Home
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-muted-foreground hover:text-foreground transition-colors">
-                  About Us
+                <Link href="/blog" className="text-muted-foreground hover:text-foreground transition-colors">
+                  Blog
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Contact */}
+          {/* About */}
           <div className="space-y-4">
-            <h3 className="text-sm font-semibold">Contact</h3>
+            <h3 className="text-sm font-semibold">About</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Contact Us
+                <Link href="/about" className="text-muted-foreground hover:text-foreground transition-colors">
+                  About Us
                 </Link>
-              </li>
-              <li>
-                <a href="mailto:kasonleegm@gmail.com" className="text-muted-foreground hover:text-foreground transition-colors">
-                  kasonleegm@gmail.com
-                </a>
               </li>
             </ul>
           </div>

@@ -1,10 +1,11 @@
 import Link from "next/link"
+import Image from "next/image"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Calendar, BookOpen } from "lucide-react"
 import { getAllBlogPosts } from "@/lib/blog-data"
 
 export function BlogSection() {
-  const posts = getAllBlogPosts().slice(0, 6) // 只显示前6篇文章
+  const posts = getAllBlogPosts().slice(0, 3) // 只显示前3篇文章
 
   return (
     <section className="py-16">
@@ -21,7 +22,19 @@ export function BlogSection() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {posts.map((post) => (
-            <Card key={post.slug} className="hover:shadow-lg transition-shadow">
+            <Card key={post.slug} className="hover:shadow-lg transition-shadow overflow-hidden">
+              {post.coverImage && (
+                <div className="relative w-[calc(100%+3rem)] h-48 overflow-hidden -mt-6 -ml-6">
+                  <Link href={`/blog/${post.slug}`}>
+                    <Image 
+                      src={post.coverImage} 
+                      alt={post.title}
+                      fill
+                      className="object-cover transition-transform hover:scale-105"
+                    />
+                  </Link>
+                </div>
+              )}
               <CardHeader>
                 <CardTitle className="text-xl hover:text-primary transition-colors mb-2">
                   <Link href={`/blog/${post.slug}`}>
